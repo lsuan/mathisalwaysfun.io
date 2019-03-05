@@ -1,6 +1,24 @@
-function checkAnswers() {
-	var urlParams = new URLSearchParams(window.location.search);
-	var answers = urlParams.values();
+function checkAnswers(result) {
+	resultJSON = JSON.parse(result);
+	if (!resultJSON.hasOwnProperty("correct")) {
+		for (var key in resultJSON["incorrect"]) {
+			document.write(resultJSON["incorrect"][key] + "<br>");
+		}
+	} else {
+		document.write(resultJSON["correct"]);
+	}
+	
+	document.write(resultJSON["total"]);
 }
 
-checkAnswers();
+function submitProblemsForm(formSubmitEvent) {	
+	formSubmitEvent.preventDefault();
+	
+	jQuery.get(
+		"SolverServlet",
+		jQuery("#problems").serialize(),
+		(result) => checkAnswers(result));
+}
+
+console.log(jQuery("#problems").serialize())
+jQuery("#problems").submit((event) => submitProblemsForm(event));

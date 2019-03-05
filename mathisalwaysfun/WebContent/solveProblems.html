@@ -3,6 +3,8 @@
 	<head>
 		<title>Math is Always Fun!</title>
 		<meta charset="utf-8"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
 		<!--<link rel="stylesheet" type="number/css" href="style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>-->
 	</head>
@@ -17,7 +19,7 @@
 			</ul>
 		</div>
 		
-		<form action="checkAnswers.html">
+		<form id="problems">
 			<ol>
 				<li>5 + 0 = <input type="number" name="answer" id="1"></li>
 				<li><input type="number" name="answer" id="2"> + 1 = 7</li>
@@ -27,7 +29,8 @@
 			</ol>
 			<input type="submit" value="Check answers!">
 		</form>
-
+		
+		<script src="answerChecker.js"></script>
 		<div class=footer>
 			<h5>Vision | 2019</h5>
 		</div>
