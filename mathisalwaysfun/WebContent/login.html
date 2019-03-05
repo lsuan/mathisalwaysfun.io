@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang=eng>
+	<head>
+		<title>Math is Always Fun!</title>
+		<meta charset="utf-8"/>
+		<!--<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>-->
+	</head>
+	
+
+	<body>
+	
+		<div class=topbar>
+			<ul class=topbar_links>
+				<a href="index.html">Home</a>
+				<a href="solveProblems.html">Solve Problems</a>
+				<a href="contactUs.html">Contact Us</a>
+			</ul>
+		</div>
+		
+		<h3>Login to Your Account</h3>
+		<form action="index.html">
+			Email: <input type="text" id="loginEmail" name="email"><br>
+			Password: <input type="password" id="loginPassword" name="password"><br>
+			<input type="submit" value="Login">
+		</form>
+		
+		
+		<h3>Sign Up for an Account</h3>
+		<form action="index.html">
+			<h4>Account Information</h4>
+			First Name: <input type="text" id="firstName" name="firstName"><br>
+			Last Name: <input type="text" id="lastName" name="lastName"><br>
+			Birthday: <input type="date" id="birthday" name="birthday" 
+				min="1970-01-01" max=getCurrentDate><br>
+			Phone Number: <input type="tel" id="phone" name="phone">
+			
+			<span class="note">Format: 123-456-7890</span><br>
+			<br>
+			<h4>Login Information</h4>
+			Email: <input type="text" id="signUpEmail" name="email"><br>
+			Password: <input type="password" id="password" name="password"><br>
+			Confirm Password: <input type="password" id="confirmPassword" name="confirmPassword"><br>
+			
+			<input type="submit" value="Sign Up">
+		</form>
+		
+		<script>
+		function getCurrentDate() {
+			var d = new Date();
+			var year = d.getFullYear();
+			var month = d.getMonth()+1;
+			var date = d.getDate();
+			
+			if (date < 10) {
+				date = "0"+date;
+			}
+			if (month < 10) {
+				month = "0"+month;
+			}
+			
+			today = year + "-" + month + "-" + date
+			document.getElementById("birthday").setAttribute("max", today);
+		}
+		</script>
+		
+		
+		<div class=footer>
+			<h5>Vision | 2019</h5>
+		</div>
+		
+		
+		
+	</body>
+</html>
