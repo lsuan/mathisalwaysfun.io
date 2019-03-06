@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang=eng>
+	<head>
+		<title>Math is Always Fun!</title>
+		<meta charset="utf-8"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<!--<link rel="stylesheet" type="number/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>-->
+	</head>
+	
+	<body>
+	
+		<div class=topbar>
+			<ul class=topbar_links>
+				<a href="../index.html">Home</a>
+				<a href="select.html">Solve Problems</a>
+				<a href="../contactUs.html">Contact Us</a>
+			</ul>
+		</div>
+		
+		<form id="problems">
+			<ol id="problemList">
+				<!-- <li>5 + 0 = <input type="number" name="answer" id="1"></li>
+				<li><input type="number" name="answer" id="2"> + 1 = 7</li>
+				<li>0 + 0 = <input type="number" name="answer" id="3"></li>
+				<li>0 + 2 = <input type="number" name="answer" id="4"></li>
+				<li><input type="number" name="answer" id="5"> + 3 = 5</li>
+				-->
+				<script src="problemGenerator.js"></script>
+			</ol>
+			<input type="submit" value="Check answers!">
+		</form>
+		
+		<div id=results>
+			<script src="answerChecker.js"></script>
+		</div>
+		
+		<div class=footer>
+			<h5>Vision | 2019</h5>
+		</div>
+		
+		
+		
+	</body>
+</html>
